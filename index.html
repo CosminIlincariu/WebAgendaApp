@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Agenda</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <button id="prev-btn">
+        &lt;
+    </button>
+
+
+
+    <div class="book">
+        <div id="p1" class="paper">
+            <div class="front front-first">
+                <div class="front-page">
+                    <h1>WebAgend</h1>
+                </div>
+            </div>
+            
+            <div class="back">
+                <div class="back-page">
+                    <form>
+                        <label for="nume">Nume:</label>
+                        <input type="text" id="nume" name="nume" placeholder="Introdu numele..." required><br>
+            
+                        <label for="prenume">Prenume:</label>
+                        <input type="text" id="prenume" name="prenume" placeholder="Introdu prenumele..." required><br>
+            
+                        <label for="telefon">Numar de telefon:</label>
+                        <input type="tel" id="telefon" name="telefon" placeholder="Introdu numarul de telefon..." required><br>
+            
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="email@something.com"><br>
+            
+                        <label for="datanasterii">Data nasterii:</label>
+                        <input type="date" id="datanasterii" name="datanasterii"><br>
+            
+                        <label for="autovehicul">Detineti un autovehicul?:</label>
+                        <select name="autovehicul" id="autovehicul"><br>
+                        <option value="da">Da</option>
+                        <option value="nu">Nu</option>
+                        </select><br>
+            
+                        <label for="inghetata">Va place inghetata cu menta?</label>
+                        <select name="inghetata" id="inghetata"><br>
+                            <option value="da">Da</option>
+                            <option value="nu">Nu</option>
+                        </select><br>
+            
+                        <input type="button" name="button" id="btn" value="Adauga un prieten">
+            
+                    </form>
+                </div>   
+            </div>
+        </div>
+
+        <div id="p2" class="paper">
+            <div class="front">
+                <div class="front-page-table">
+                    
+                    <table id="show">
+			
+                        <tr>
+                            <th>Nume</th>
+                            <th>Prenume</th>
+                            <th>Telefon</th>
+                            <th>Email</th>
+                            <th>Data nasterii</th>
+                            <th>Detine un autovehicul</th>
+                            <th>Ii place inghetata cu menta</th>
+                   
+                
+                        </tr>
+                    
+                </table>
+                </div>
+            </div>
+            
+            
+        </div>
+
+    </div>
+
+    <!-- Next Button -->
+    <button id="next-btn">
+        &gt;
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
