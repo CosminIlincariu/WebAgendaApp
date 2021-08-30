@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Agenda</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
+  <!-- Prev Button -->
     <button id="prev-btn">
         &lt;
     </button>
-
-
 
     <div class="book">
         <div id="p1" class="paper">
             <div class="front front-first">
                 <div class="front-page">
-                    <h1>WebAgend</h1>
+                    <h1>webAgenda</h1>
                 </div>
             </div>
             
             <div class="back">
                 <div class="back-page">
-                    <form>
+                    <form id="myForm">
                         <label for="nume">Nume:</label>
                         <input type="text" id="nume" name="nume" placeholder="Introdu numele..." required><br>
             
@@ -34,10 +33,10 @@
                         <input type="text" id="prenume" name="prenume" placeholder="Introdu prenumele..." required><br>
             
                         <label for="telefon">Numar de telefon:</label>
-                        <input type="tel" id="telefon" name="telefon" placeholder="Introdu numarul de telefon..." required><br>
+                        <input type="tel" id="telefon" name="telefon" pattern="[0-7]{1}[0-9]{9}"  title="Numarul de telefon trebuie sa inceapa cu 07 si sa nu depaseasca 10 cifre" placeholder="Introdu numarul de telefon..." required><br>
             
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="email@something.com"><br>
+                        <input type="email" id="email" name="email" placeholder="email@domain.com"><br>
             
                         <label for="datanasterii">Data nasterii:</label>
                         <input type="date" id="datanasterii" name="datanasterii"><br>
@@ -54,9 +53,13 @@
                             <option value="nu">Nu</option>
                         </select><br>
             
-                        <input type="button" name="button" id="btn" value="Adauga un prieten">
-            
+                        <input type="submit" name="button" id="btn" value="Adauga un prieten">
+                        <input type="button" name="button" id="clearbtn" value = "Curata Agenda">
                     </form>
+                    <div class="message">
+                        <h1 id="message"></h1>
+                    </div>
+                   
                 </div>   
             </div>
         </div>
@@ -64,35 +67,27 @@
         <div id="p2" class="paper">
             <div class="front">
                 <div class="front-page-table">
-                    
                     <table id="show">
-			
                         <tr>
-                            <th>Nume</th>
-                            <th>Prenume</th>
-                            <th>Telefon</th>
-                            <th>Email</th>
-                            <th>Data nasterii</th>
-                            <th>Detine un autovehicul</th>
-                            <th>Ii place inghetata cu menta</th>
-                   
-                
-                        </tr>
-                    
+                            <th class="nume-cell">Nume</th>
+                            <th class="prenume-cell">Prenume</th>
+                            <th class="telefon-cell">Telefon</th>
+                            <th class="email-cell">Email</th>
+                            <th class="data-cell">Data nasterii</th>
+                            <th class="vehicul-cell">Detine un autovehicul</th>
+                            <th class="icecream-cell">Adora inghetata cu menta</th>
+                        </tr>            
                 </table>
                 </div>
-            </div>
-            
-            
+            </div> 
         </div>
-
     </div>
 
-    <!-- Next Button -->
-    <button id="next-btn">
+      <!-- Next Button -->
+      <button id="next-btn">
         &gt;
     </button>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
