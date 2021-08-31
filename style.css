@@ -226,7 +226,7 @@ table,tr,th,td {
 .switch {
 
     position: absolute;
-    bottom: 3vw;
+    bottom: 2vw;
     left: 49%;
     display: inline-block;
     width: 60px;
@@ -357,4 +357,3 @@ table,tr,th,td {
       border-color: transparent
     }
   }
-
