@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>webAgenda</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-  <!-- Prev Button -->
-    <button id="prev-btn">
-        &lt;
-    </button>
+<body id = "body">
 
     <div class="book">
         <div id="p1" class="paper">
             <div class="front front-first">
                 <div class="front-page">
                     <h1>webAgenda</h1>
+                    <div class="wrapper">
+                        <div class="blob"></div>
+                        <div class="typing-demo">
+                        You can store your friends online
+                      </div>
+                    </div>
                 </div>
             </div>
             
@@ -83,11 +84,11 @@
         </div>
     </div>
 
-      <!-- Next Button -->
-      <button id="next-btn">
-        &gt;
-    </button>
-    
+    <label class="switch">
+        <input type="checkbox" id="cb">
+        <span class="slider round"></span>
+     </label>
+
     <script src="script.js"></script>
 </body>
 </html>

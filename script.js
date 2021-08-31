@@ -1,26 +1,32 @@
-const prevBtn = document.querySelector("#prev-btn");
-const nextBtn = document.querySelector("#next-btn");
+
 const book = document.querySelector(".book");
 const paper1 = document.querySelector("#p1");
+const switchBtn = document.querySelector("#cb");
+
 
 const openBook = () => {
     book.style.transform = "translateX(50%)";
-    prevBtn.style.transform = "translateX(-350px)";
-    nextBtn.style.display = "none";
-    prevBtn.style.display = "block";
     paper1.classList.add("flipped");
+
 }
 
 const closeBook = () => {
     book.style.transform = "translateX(0%)";
-    prevBtn.style.transform= "translateX(0px)";
-    nextBtn.style.display= "block";
-    prevBtn.style.display= "none";
     paper1.classList.remove("flipped");
 }
 
-prevBtn.addEventListener("click",closeBook);
-nextBtn.addEventListener("click",openBook);
+
+
+switchBtn.addEventListener("click",() => {
+    if(switchBtn.checked===true)
+    {
+        openBook();
+
+    }
+    else {
+        closeBook();
+    }
+})
 
 let list1 = [];
 	
