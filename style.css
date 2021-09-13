@@ -130,8 +130,8 @@ select#autovehicul {
   position: relative;
   display: flex;
   max-width: 95%;
-  max-height: 100%;
-  margin: 3vw auto;
+  height: 95%;
+  margin: 1vh auto;
 }
 
 #show th {
@@ -143,10 +143,14 @@ select#autovehicul {
 #show tr,
 #show th,
 #show td {
-  border: 1px solid rgba(255, 121, 63, 1);
   border-collapse: collapse;
   overflow: hidden;
   text-align: center;
+}
+
+#show td {
+  border: 1px solid rgba(255, 121, 63, 1);
+  padding: 1em 0;
 }
 
 .nume-cell,
